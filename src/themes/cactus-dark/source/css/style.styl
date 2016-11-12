@@ -26,8 +26,12 @@ body
   flex-direction: column
   antialias()
 
+@media (min-width: 720px)
+  .content
+    max-width: 50%
+  
 .content
-  width: 50%
+  min-width: 50%
   flex: 1
   @extend $base-style
 
