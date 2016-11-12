@@ -1,0 +1,29 @@
+projects_url: http://github.com/probberechts
+
+customize:
+    logo:
+        enabled: false
+        width: 50
+        height: 50
+        url: /images/logo.png
+    favicon: /images/favicon.png # path to favicon
+    social_links:
+      github: https://github.com/oscarcs/
+      twitter: https://twitter.com/oscaroverflow/
+      gamepad: https://oscar.itch.io/
+
+# RSS
+rss: false
+
+# Plugins
+plugins:
+    disqus_shortname: # Disqus Comments Shortname
+    google_analytics: # enter the tracking ID for your Google Analytics
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:

@@ -1,0 +1,12 @@
+  [
+      {
+         "name":"interp",
+         "url":"https://github.com/oscarcs/interp",
+         "desc":"Experiments with parsers and interpreters."
+      },
+      {
+         "name":"hacks",
+         "url":"https://github.com/oscarcs/hacks",
+         "desc":"Haxe roguelike framework."
+      }
+  ]
