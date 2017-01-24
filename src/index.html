@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="res/styles.css" crossorigin="anonymous">
-        <title>oscar c. s.</title>
+        <title>${site.title}</title>
     </head>
     <body>
         <div class="container">
             <section>
                 <h2>oscar c. s.</h2>
-                <p>Student and developer from Auckland, NZ.</p>
+                <p>${site.description}</p>
                 <ul class="wordlist">
                     <li><a class="icon" target="_blank" href="https://github.com/oscarcs/"><i class="fa fa-lg fa-github"></i></a></li>       
                     <li><a class="icon" target="_blank" href="https://twitter.com/oscaroverflow/"><i class="fa fa-lg fa-twitter"></i></a></li>
@@ -21,23 +21,17 @@
             <section>
                 <h2>posts</h2>
                 <ul class="posts">
-                
-                    <li><time>2016-11-22</time><a href="/posts/haxe-linux.html">Haxe Development on Linux</a></li>
-                
-                    
-                
+                ${site.pages.map((page, index) => `
+                    ${(index < 5 && page.name != 'index') ? `<li><time>${page.date}</time><a href="${page.path}">${page.title}</a></li>` : ''}
+                `).join('')}
                 </ul>
             </section>
             <section>
                 <h2>projects</h2>
                 <ul>
-                    
-                        <li><a href="https://github.com/oscarcs/ossg">ossg</a>: Tiny static site generator.</li>
-                    
-                        <li><a href="https://github.com/oscarcs/interp">interp</a>: Experiments with parsers and interpreters.</li>
-                    
-                        <li><a href="https://github.com/oscarcs/hacks">hacks</a>: Haxe roguelike framework.</li>
-                    
+                    ${site.projects.map(project => `
+                        <li><a href="${project.url}">${project.name}</a>: ${project.description}</li>
+                    `).join('')}
                 </ul>
             </section>
         </div>
