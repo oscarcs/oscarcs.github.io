@@ -1,8 +1,12 @@
 <section>
 <h2>${page.title}</h2>
 <ul class="posts">
-${site.pages.map(page => `
-    ${page.name != 'index' ? `<li><time>${page.date}</time><a href="${page.path}">${page.title}</a></li>` : ''}
-`).join('')}
+${site.pages
+    .sort((a, b) => a.date < b.date)
+    .map(page => `
+        ${page.name != 'index' ? `<li><time>${page.date}</time><a href="${page.path}">${page.title}</a></li>` : ''}
+    `)
+    .join('')
+}
 </ul>
 </section>
