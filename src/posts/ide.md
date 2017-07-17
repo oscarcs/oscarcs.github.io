@@ -5,7 +5,7 @@ date: 2017-04-08
 template: post
 ---
 
-Abstractions are a pretty fundamental part of software development. They can be helpful for reducing the mental load when reasoning about code, which allows us to write code more quickly and easily. By allowing the programmer to think about  
+Abstractions are a pretty fundamental part of software development. They can be helpful for reducing the mental load when reasoning about code, which allows us to write code more quickly and easily.
 
 Traditionally, the IDE has been a useful type of abstraction. It sits atop the regular tooling, to provide a helpful interface to the usual programming language tools.
 
