@@ -113,6 +113,8 @@ window.onload = function() {
 
             // Seat distributions properties:
             seats: {},
+            totalSeats: 0,
+            overhangSeats: 0,
         },
 
         watch: {
@@ -493,8 +495,37 @@ window.onload = function() {
                 seats.sort((x, y) => y.seats - x.seats);                
 
                 this.seats = seats;
+                this.totalSeats = seats.reduce((acc, x) => acc += x.seats, 0);
+                this.overhangSeats = Math.max(0, this.totalSeats - 120);
+
                 return seats;
             },
+
+            calculateMPs: function() {
+                let x = this.seats.map(p => {
+                    var electorateMPs = this.electorates
+                        .filter(e => e.current.party.abbreviation == p.party.abbreviation)
+                        .map(e => {
+                            return {
+                                electorate: e,
+                                mp: e.current.name
+                            }
+                        });
+
+                    var listMPs = Object.values(p.party.list)
+                        .filter(c => !electorateMPs.find(e => e.mp == c))
+                        .slice(0, p.seats - electorateMPs.length);
+
+                    return {
+                        party: p.party,
+                        electorateMPs,
+                        listMPs
+                    };
+                });
+
+                return x;
+                console.log(x);
+            }
 
         }
     });
