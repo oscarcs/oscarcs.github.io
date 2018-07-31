@@ -1,0 +1,104 @@
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+    border-radius: 100px;
+}
+
+/* Sections */
+.section {
+    padding-top: 3rem;
+}
+
+.header {
+    padding-top: 8rem;
+}
+
+.row.top {
+    /* height: 8rem; */
+    display: inline-block;
+    width: 100%;
+}
+
+.logo {
+    background-image: url('../img/logo.png');
+    /* background-position: 50%; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 7rem;
+}
+
+.logo h1 {
+    display: none;
+}
+
+.top .intro {
+    /* clear: margin; */
+    margin-top: auto;
+    vertical-align: middle;
+    display: inline-block;
+    /* font-size: 1rem; */
+}
+
+.intro a {
+    color: #222;
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 0.5rem;
+    height: 20rem;
+    background-size: cover;
+    text-decoration: none;
+    display: block;
+    line-height: 36rem; /* (2 * height + border-bottom) */ 
+    border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-indent: 15px;
+    color: #fff;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 3px 12px -3px rgba(36, 36, 36, 0.6);
+    transition: border-bottom-color .2s ease-in;
+    transition: background-color .2s ease-in;
+    background-position: 50%;
+    background-image: url('../img/placeholder.jpg');
+    background-color: rgba(200, 100, 0, 0.1);
+    background-blend-mode: multiply;    
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card:hover {
+    color: #fff;
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(200, 100, 0, 0.5);
+}
+
+#nxcolor::after {
+    content: "  |  Color manipulation library written in Haxe";
+    white-space: pre;
+    transition: all .2s ease-in;
+    display: none;
+    font-weight: normal;
+    text-overflow: ellipsis;
+}
+#nxcolor:hover::after {
+    text-overflow: ellipsis;
+    display: initial;
+}
+
+
+
+/* Help */
+.get-help {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Categories */
+.categories {
+    background-image: url('../images/values-bg.jpg');
+    background-size: cover;
+    color: #fff;
+}
+.categories .section-description { 
+    margin-bottom: 4rem;
+}
