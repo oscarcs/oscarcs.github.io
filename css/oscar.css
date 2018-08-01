@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 3px 12px -3px rgba(36, 36, 36, 0.6);
     transition: border-bottom-color .2s ease-in;
     transition: background-color .2s ease-in;
-    background-position: 0%;
+    background-position: 50%;
     background-image: url('../img/placeholder.jpg');
     background-color: rgba(190, 80, 70, 0.7);
     background-blend-mode: multiply;    
@@ -134,6 +134,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #legislatures {
+    background-position-y: bottom;
     color: #abb2bf;
     background-image: url('../img/legislature.png');
 }
@@ -150,6 +151,45 @@ h1, h2, h3, h4, h5 {
     color: #fff;
 }
 #legislatures:hover::after {
+    text-overflow: ellipsis;
+    display: initial;
+}
+
+#bplus {
+    color: #abb2bf;
+}
+#bplus::after {
+    content: "  |  Tiny programming language";
+    white-space: pre;
+    transition: all .2s ease-in;
+    display: none;
+    font-weight: normal;
+    text-overflow: ellipsis;
+}
+#bplus:hover {
+    color: #fff;
+}
+#bplus:hover::after {
+    text-overflow: ellipsis;
+    display: initial;
+}
+
+#mmp {
+    color: #abb2bf;
+    background-image: url('../img/mmp.jpg');
+}
+#mmp::after {
+    content: "  |  NZ elections are complicated";
+    white-space: pre;
+    transition: all .2s ease-in;
+    display: none;
+    font-weight: normal;
+    text-overflow: ellipsis;
+}
+#mmp:hover {
+    color: #fff;
+}
+#mmp:hover::after {
     text-overflow: ellipsis;
     display: initial;
 }
