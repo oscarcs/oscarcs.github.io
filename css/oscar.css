@@ -1,23 +1,28 @@
 body {
-    background-color: #282c34;
-    font-family: 'Courier New', Courier, monospace;
-    color: #abb2bf;
+    /* background-color: #282c34; */
+    background-color: whitesmoke;
+    font-family: 'Inconsolata', monospace;
+    color: #282c34;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Courier New', Courier, monospace;
-    color: #abb2bf;
+    font-family: 'Inconsolata', monospace;
+    color: #282c34;
 }
 
 .color-band {
-    background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%);
+    /* background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%); */
+    background: #4b5263;
     width: 100%;
     height: 1rem;
-    box-shadow: 0 3px 12px 0px rgba(36, 36, 36, 0.6);
+    box-shadow: 0 1px 12px 0px rgba(175, 175, 175, 0.6);
 }
 
 .color-band-thin {
-    background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%);
+    /* 
+    background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%); 
+    */
+    background: #4b5263;
     width: 100%;
     height: 0.3rem;
     box-shadow: 0 3px 12px -3px rgba(36, 36, 36, 0.6);
@@ -44,7 +49,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .c6 {
-    color: #abb2bf;
+    color: #282c34;
 }
 
 .button {
@@ -82,7 +87,7 @@ h1, h2, h3, h4, h5 {
     text-decoration: none;
 }
 .intro a:hover {
-    color:#abb2bf;
+    color:#282c34;
 }
 
 .card {
@@ -110,14 +115,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .card:hover {
-    color: #abb2bf;
+    color: #282c34;
     border-bottom-color: rgba(0, 0, 0, 0.3);
     background-color: rgba(224, 108, 117, 0.9);
 }
 
 #nxcolor {
     background-image: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%);
-    color: #282c34;
+    color: #ddd;
 }
 #nxcolor::after {
     content: "  |  Haxe color library";
@@ -128,6 +133,9 @@ h1, h2, h3, h4, h5 {
     text-overflow: ellipsis;
     /* background-color: #d4525d; */
 }
+#nxcolor:hover {
+    color: #fff;
+}
 #nxcolor:hover::after {
     text-overflow: ellipsis;
     display: initial;
@@ -135,7 +143,7 @@ h1, h2, h3, h4, h5 {
 
 #legislatures {
     background-position-y: bottom;
-    color: #abb2bf;
+    color: #ddd;
     background-image: url('../img/legislature.png');
 }
 #legislatures::after {
@@ -156,7 +164,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #bplus {
-    color: #abb2bf;
+    color: #ddd;
 }
 #bplus::after {
     content: "  |  Tiny programming language";
@@ -175,7 +183,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #mmp {
-    color: #abb2bf;
+    color: #ddd;
     background-image: url('../img/mmp.jpg');
 }
 #mmp::after {
