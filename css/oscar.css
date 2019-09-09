@@ -1,18 +1,18 @@
 body {
     /* background-color: #282c34; */
     background-color: whitesmoke;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Quicksand', sans-serif;
     color: #282c34;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Quicksand', monospace;
     color: #282c34;
 }
 
 .color-band {
     /* background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%); */
-    background: #4b5263;
+    background: #0B5394;
     width: 100%;
     height: 1rem;
     box-shadow: 0 1px 12px 0px rgba(175, 175, 175, 0.6);
@@ -22,9 +22,9 @@ h1, h2, h3, h4, h5 {
     /* 
     background: linear-gradient(to right, #61afef 0%, #61afef 18%, #98c379 18.001%, #98c379 38%, #e5c07b 38.001%, #e5c07b 45%, #d19a66 45.001%, #d19a66 60%, #c678dd 60.001%, #c678dd 82%, #e06c75 82.001%, #e06c75 100%); 
     */
-    background: #4b5263;
+    background: #0B5394;
     width: 100%;
-    height: 0.3rem;
+    height: 0.2rem;
     box-shadow: 0 3px 12px -3px rgba(36, 36, 36, 0.6);
 }
 
@@ -61,21 +61,56 @@ h1, h2, h3, h4, h5 {
 }
 
 .header {
-    padding-top: 8rem;
+    padding-top: 4rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+}
+
+.heading .logo {
+    color: #3D85C6;
+    font-size: 4rem;
+}
+
+.heading .text {
+    color: #0B5394;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2rem;
+}
+
+.heading .name {
+    font-size: 2rem;
+}
+
+.heading .title {
+    font-weight: bold;
 }
 
 .row.top {
-    /* height: 8rem; */
     display: inline-block;
     width: 100%;
+    padding-bottom: 1rem;
+}
+
+.row.top .column {
+    height: 5rem;
 }
 
 .top .intro {
-    /* clear: margin; */
-    margin-top: auto;
-    vertical-align: middle;
-    display: inline-block;
-    /* font-size: 1rem; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+}
+
+.intro a:not(:last-child) {
+    padding-right: 1rem;
 }
 
 .top h1 {
