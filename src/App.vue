@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar wrapper-class="container">
+    <b-navbar wrapper-class="container" transparent="true">
       <template slot="brand">
         <b-navbar-item tag="router-link" to="/">
           <div class="logo">//</div>
@@ -12,7 +12,8 @@
       </template>
       <template slot="end">
         <b-navbar-item tag="router-link" to="/about">about</b-navbar-item>
-        <b-navbar-item tag="router-link" to="/blog">blog</b-navbar-item>
+        <b-navbar-item tag="router-link" to="/projects">projects</b-navbar-item>
+        <b-navbar-item tag="router-link" to="/writing">writing</b-navbar-item>
       </template>
     </b-navbar>
     <router-view />
@@ -29,7 +30,7 @@ $family-primary: "Quicksand", sans-serif;
 $weight-normal: 400;
 
 // Main Theme Colors
-$color-main: $black;
+$color-main: black;
 $color-main-invert: $white;
 $color-text: $white;
 $color-link: $grey;
@@ -42,7 +43,7 @@ $scheme-invert: $color-main-invert;
 $scheme-invert-bis: $white;
 $scheme-invert-ter: $white;
 
-$background: color.adjust($color-main, $lightness: 5%);
+$background: color.adjust($color-main, $lightness: 10%);
 
 $text: $color-text;
 $text-invert: color.invert($color-text, $weight: 100%);

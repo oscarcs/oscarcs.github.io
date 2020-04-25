@@ -6,7 +6,7 @@
           Hi, I'm Oscar.
         </h5>
         <h3 class="subtitle">
-          I'm an engineer from Auckland, NZ.<br />          
+          I'm an engineer from Auckland, New Zealand.<br />          
         </h3>
       </div>
     </div>
