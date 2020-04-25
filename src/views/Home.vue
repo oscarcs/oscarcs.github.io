@@ -1,17 +1,22 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section class="hero-skytower is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">
+        <h5 class="title">
+          Hi, I'm Oscar.
+        </h5>
+        <h3 class="subtitle">
+          I'm an engineer from Auckland, NZ.<br />          
+        </h3>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
   components: {
-    HelloWorld
   }
 }
 </script>
