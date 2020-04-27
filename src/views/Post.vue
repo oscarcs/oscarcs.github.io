@@ -4,7 +4,7 @@
       <template v-if="!loading">
         <h1 class="title">{{title}}</h1>
         <h1 class="subtitle">{{subtitle}}</h1>
-        <p>{{content}}</p>
+        <div class="content" v-html="content"></div>
       </template>
     </div>
   </div>
@@ -58,3 +58,11 @@ export default class Post extends Vue {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.post {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+</style>
