@@ -7,13 +7,13 @@
       <div class="column">
         <div class="section">
           <div class="content">
-            <h1 class="title">About me</h1>
+            <h1 class="title">about</h1>
             <p>I'm an engineer from Auckland.</p>
+            <p>This website catalogues some of the things I've been working on and thinking about, in software engineering and other fields.</p> 
             <p>Computers are <a href="https://twitter.com/whitequark/status/1115432559738019840?s=20">great</a>,
             but programmers have a pretty poor track record. Most software is slow, faulty, and late.<br />
             I think that we can do better.</p>
-            <p>This website catalogues some of the things I've been working on and thinking about, in software engineering and other fields. 
-            If you want to get in touch, you can find me below:</p>
+            <p>If you want to get in touch, you can find me below, or at oscar@oscarsims.co.nz.</p>
             <p>
               <a class="fab fa-twitter" href="https://twitter.com/oscaroverflow"></a>
               <a class="fab fa-github" href="https://github.com/oscarcs"></a>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar wrapper-class="container" transparent="true">
+    <b-navbar wrapper-class="container" :transparent="true">
       <template slot="brand">
         <b-navbar-item tag="router-link" to="/">
           <div class="logo">//</div>

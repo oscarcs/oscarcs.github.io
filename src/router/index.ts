@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Projects from '../views/Projects.vue'
 import Writing from '../views/Writing.vue'
+import Post from '../views/Post.vue'
 
 Vue.use(VueRouter)
 
@@ -23,10 +24,18 @@ Vue.use(VueRouter)
     name: 'Projects',
     component: Projects
   },
+  { 
+    path: '/projects/:url', 
+    component: Post
+  },
   {
     path: '/writing',
     name: 'Writing',
     component: Writing
+  },
+  { 
+    path: '/writing/:url', 
+    component: Post
   }
 ]
 
