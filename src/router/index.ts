@@ -12,7 +12,8 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: { navbarColor: 'is-light' }
   },
   {
     path: '/about',

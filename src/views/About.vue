@@ -1,25 +1,28 @@
 <template>
-  <div class="container">
-    <div class="columns is-vcentered">
-      <div class="column is-one-third has-text-centered">
-        <img class="picture" src="../assets/face.png">
-      </div>
-      <div class="column">
-        <div class="section">
-          <div class="content">
-            <h1 class="title">about</h1>
-            <p>I'm an engineer from Auckland.</p>
-            <p>This website catalogues some of the things I've been working on and thinking about, in software engineering and other fields.</p> 
-            <p>Computers are <a href="https://twitter.com/whitequark/status/1115432559738019840?s=20">great</a>,
-            but programmers have a pretty poor track record. Most software is slow, faulty, and late.<br />
-            I think that we can do better.</p>
-            <p>If you want to get in touch, you can find me below, or at oscar@oscarsims.co.nz.</p>
-            <p>
-              <a class="fab fa-twitter" href="https://twitter.com/oscaroverflow"></a>
-              <a class="fab fa-github" href="https://github.com/oscarcs"></a>
-              <a class="fab fa-linkedin" href="https://www.linkedin.com/in/oscarcs"></a>
-              <a class="fa fa-gamepad" href="https://oscar.itch.io"></a>
-            </p>
+  <div>
+    <Navbar></Navbar>
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-one-third has-text-centered">
+          <img class="picture" src="../assets/face.png">
+        </div>
+        <div class="column">
+          <div class="section">
+            <div class="content">
+              <h1 class="title">about</h1>
+              <p>I'm a software engineer from Auckland.</p>
+              <p>This website catalogues some of the things I've been working on and thinking about, in software engineering and other fields.</p> 
+              <p>Computers are <a href="https://twitter.com/whitequark/status/1115432559738019840?s=20">great</a>,
+              but programmers have a pretty poor track record. Most software is slow, faulty, and late.<br />
+              I think that we can do better.</p>
+              <p>If you want to get in touch, you can find me below, or at <span class="orange">oscar@oscarsims.co.nz.</span></p>
+              <p>
+                <a class="fab fa-twitter" href="https://twitter.com/oscaroverflow"></a>
+                <a class="fab fa-github" href="https://github.com/oscarcs"></a>
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/oscarcs"></a>
+                <a class="fa fa-gamepad" href="https://oscar.itch.io"></a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -27,7 +30,19 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+import Navbar from '@/components/Navbar.vue';
+
+@Component({ components: { Navbar } })
+export default class About extends Vue {
+
+}
+</script>
+
 <style scoped lang="scss">
+@import "@/styles/oscar.scss";
+
 .content p:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -40,7 +55,7 @@
 }
 
 .fa, .fab {
-  color: white;
+  color: $slate;
 
   &:not(:last-child) {
     margin-right: 3rem;

@@ -45,6 +45,7 @@ export default class Blog extends Vue {
   @Prop() private url!: string;
 
   private posts: Post[] = [];
+  private totalPosts = 0;
 
   mounted() {
     fetch(Config.baseUrl + this.url)
@@ -53,11 +54,12 @@ export default class Blog extends Vue {
     })
     .then(data => {
       console.log(data);
-      this.posts = data.map((x: Post) => {
+      this.posts = data.rows.map((x: Post) => {
         x.url = this.url + '/' + x.url;
         x.date = new Date(x.date);
         return x;
       });
+      this.totalPosts = data.length;
     })
   }
 }
