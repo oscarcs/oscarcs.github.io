@@ -12,14 +12,14 @@
           </div>
           <div class="pitch">
             I build <span 
-              :class="['accent', accentText[accentTextIndex].class]"
+              :class="['accent', accentClass]"
             >{{accentText[accentTextIndex].text}}.</span>
           </div>
           <div class="endnote">
             <router-link to="/about">about</router-link>
             <router-link to="/projects">projects</router-link>
             <router-link to="/writing">writing</router-link>
-            <a style="margin-left: 2rem;" class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
+            <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
             <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
             <a class="fab fa-linkedin purple" href="https://www.linkedin.com/in/oscarcs"></a>
             <a class="fa fa-gamepad blue" href="https://oscar.itch.io"></a>
@@ -38,30 +38,30 @@ import Navbar from '@/components/Navbar.vue';
 export default class Home extends Vue {
   private accentText = [
     { text: 'software', class: 'orange' },
-    { text: 'software', class: 'white' },
     { text: 'web apps', class: 'red' },
-    { text: 'web apps', class: 'white' },
     { text: 'compilers', class: 'purple' },
-    { text: 'compilers', class: 'white' },
     { text: 'desktop apps', class: 'blue' },
-    { text: 'desktop apps', class: 'white' },
     { text: 'backends', class: 'orange' },
-    { text: 'backends', class: 'white' },
     { text: 'cloud software', class: 'red' },
-    { text: 'cloud software', class: 'white' },
     { text: 'tooling', class: 'purple' },
-    { text: 'tooling', class: 'white' },
-    { text: 'CI/CD pipelines', class: 'blue' },
-    { text: 'CI/CD pipelines', class: 'white' },
+    { text: 'CI/CD pipelines', class: 'blue' }
   ]
 
-  // private accentTextIndex = Math.floor(Math.random() * this.accentText.length);
   private accentTextIndex = 0;
+  private accentClass = this.accentText[this.accentTextIndex].class;
 
   mounted () {
+    setTimeout(() => {
+      this.accentClass = 'white'
+    }, 1500) 
+
     setInterval(() => {
-      this.accentTextIndex = (this.accentTextIndex + 1) % this.accentText.length; 
-    }, 2500);
+      this.accentTextIndex = (this.accentTextIndex + 1) % this.accentText.length;
+      this.accentClass = this.accentText[this.accentTextIndex].class;
+      setTimeout(() => {
+        this.accentClass = 'white'
+      }, 1500) 
+    }, 2000);
   }
 }
 </script>
@@ -78,13 +78,17 @@ export default class Home extends Vue {
   }
 
   .white {
-    color: white;
+    color: transparent;
   }
 
   .name {
     font-size: 2rem;
     margin-bottom: 3rem;
     font-weight: 100;
+
+    @media (max-width: 30em) {
+      font-size: 1.66rem;
+    }
   }
 
   .logo {
@@ -94,6 +98,10 @@ export default class Home extends Vue {
 
   .pitch {
     font-size: 3rem;
+
+    @media (max-width: 30em) {
+      font-size: 2rem;
+    }
   }
 
   .subpitch {
@@ -117,7 +125,7 @@ export default class Home extends Vue {
     transition: color 0.8s;
   }
 
-  .fa, .fab {
+  .fab, .fa {
     // color: white;
     &:not(:last-child) {
       margin-right: 2rem;

@@ -33,7 +33,32 @@ export default class Navbar extends Vue {
 </script>
 
 <style lang="scss" scoped>
+  @import "@/styles/oscar.scss";
+
   .navbar {
     background-color: transparent;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    padding-left: 0.5rem;
+    font-size: $logo-size;
+  }
+
+  .logo-text {
+    margin-left: $logo-size / 2;
+    margin-right: $logo-size / 2;
+  }
+
+  .logo-name {
+    font-size: $logo-size / 2;
+  }
+
+  .logo-title {
+    font-size: ($logo-size / 2) * 0.75;
   }
 </style>
