@@ -8,7 +8,7 @@
           </div>
           <div class="pitch">
             <!-- <span class="accent">Hi,</span> -->
-             Hi, I'm an engineer from <span class="">Auckland</span>, NZ.
+             <div class="line">Hi, I'm an engineer from</div> <div class="line">Auckland, NZ.</div>
           </div>
           <div class="pitch">
             I build <span 
@@ -100,8 +100,12 @@ export default class Home extends Vue {
     font-size: 3rem;
 
     @media (max-width: 30em) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
+  }
+
+  .line {
+    display: inline-block;
   }
 
   .subpitch {
@@ -116,6 +120,13 @@ export default class Home extends Vue {
     color: $slate;
     &:not(:last-child) {
       margin-right: 2rem;
+
+      &::after {
+        @media (max-width: 30em) {
+          content: "\A";
+          white-space: pre;
+        }
+      }
     }
   }
 
