@@ -13,23 +13,25 @@ $red: #FC5157;
 $orange: #FF6322;
 
 // Main Theme Colors
-$color-main: $white;
-$color-main-invert: $black-ter;
-$color-text: $slate;
-$color-link: $purple;
+$color-main: white;
+$color-main-invert: $white-ter;
+$color-text: color.adjust($black, $lightness: 20%);
+$color-link: $orange;
+$dark: $purple;
 
 $scheme-main: $color-main;
-$scheme-main-bis: color.adjust($color-main, $lightness: 5%);
-$scheme-main-ter: color.adjust($color-main, $lightness: 10%);
+$scheme-main-bis: color.adjust($color-main, $lightness: -5%);
+$scheme-main-ter: color.adjust($color-main, $lightness: -10%);
 
 $scheme-invert: $color-main-invert;
-$scheme-invert-bis: $white;
-$scheme-invert-ter: $white;
+// $scheme-invert-bis: $white;
+// $scheme-invert-ter: $white;
 
 $background: color.adjust($color-main, $lightness: -10%);
 
 $text: $color-text;
 $text-invert: color.invert($color-text, $weight: 100%);
+$text-lighter: color.adjust($text, $lightness: 50%);
 
 $link: $color-link;
 $link-invert: color.invert($color-link, $weight: 100%);
@@ -49,4 +51,81 @@ $logo-size: 2.4rem;
 }
 .purple {
   color: $purple;
+}
+
+.navbar-burger {
+  height: initial;
+}
+
+.hero.is-dark {
+  background-color: color.adjust($black, $lightness: -10%) !important;
+
+  .title {
+    padding-top: 2.25rem;
+    font-weight: 100;
+  }
+
+  .navbar.is-dark {
+    background-color: transparent;
+  }
+}
+
+html {
+  background-color: $scheme-main-bis !important;
+}
+
+.base {
+  background-color: $color-main;
+}
+
+.stuff {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 30rem;
+  
+  @media (max-width: $desktop) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.post {
+  margin-bottom: 6rem;
+  cursor: pointer;
+
+  h3 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: -0.2rem;
+    width: 100%;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $scheme-main-ter;
+      position: relative;
+      margin-left: 2rem;
+    }
+  }
+
+  .info {
+    margin-bottom: 1.5rem;
+    color: $text-lighter;
+  }
+
+  hr {
+    border: 0;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $scheme-main-ter;
+  }
+}
+
+.footer {
+  color: $text-lighter;
 }

@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :type="color || 'is-transparent'" wrapper-class="container" :transparent="true">
+  <b-navbar :type="'is-dark'" wrapper-class="container" :transparent="true">
     <template slot="brand">
       <b-navbar-item tag="router-link" to="/">
         <div class="logo">//</div>
@@ -11,13 +11,13 @@
     </template>
     <template slot="end">
       <b-navbar-item tag="router-link" to="/about">
-        <span>about</span>
+        <span>About</span>
       </b-navbar-item>
       <b-navbar-item tag="router-link" to="/projects">
-        <span>projects</span>
+        <span>Projects</span>
       </b-navbar-item>
       <b-navbar-item tag="router-link" to="/writing">
-        <span>writing</span>
+        <span>Writing</span>
       </b-navbar-item>
     </template>
   </b-navbar>
@@ -36,12 +36,7 @@ export default class Navbar extends Vue {
   @import "@/styles/oscar.scss";
 
   .navbar {
-    background-color: transparent;
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
+    // background-color: $slate;
   }
 
   .logo {

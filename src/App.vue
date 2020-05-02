@@ -27,7 +27,12 @@ html {
   overflow: auto;
 }
 
-.navbar-burger {
-  height: initial;
+.hero.is-dark {
+  background-image: url('assets/sky-tower-dark.jpg');
+  background-position: bottom 50% right -6%;
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-color: black;
+  background-size: 44%;
 }
 </style>

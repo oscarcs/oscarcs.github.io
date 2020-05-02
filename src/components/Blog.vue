@@ -66,9 +66,4 @@ export default class Blog extends Vue {
 </script>
 
 <style scoped lang="scss">
-.post {
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
 </style>

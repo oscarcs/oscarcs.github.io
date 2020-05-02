@@ -1,20 +1,32 @@
 <template>
-  <div class="container">
-    <div class="section">
-      <template v-if="!loading">
-        <h1 class="title">{{title}}</h1>
-        <h1 class="subtitle">{{subtitle}}</h1>
-        <div class="content" v-html="content"></div>
-      </template>
+  <div class="base">
+    <section class="hero is-dark">
+      <Navbar></Navbar>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">{{title}}</h1>
+          <h1 class="subtitle">{{subtitle}}</h1>
+        </div>
+      </div>
+    </section>
+    <div class="stuff">
+      <div class="container">
+        <template v-if="!loading">
+          <div class="content" v-html="content"></div>
+        </template>
+      </div>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
+import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 import Config from '../config';
 
-@Component({ components: { }})
+@Component({ components: { Navbar, Footer }})
 export default class Post extends Vue {
   private loading = true;
 

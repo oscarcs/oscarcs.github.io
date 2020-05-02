@@ -1,8 +1,10 @@
 <template>
     <div @click="go()">
-        {{date | date}} - 
-        <span class="has-text-weight-bold">{{title}}</span> - 
-        <span class="has-text-weight-light">{{subtitle}}</span>
+      <h3>{{title}}</h3>
+      <div class="info has-text-weight-light">
+        {{date | date}} 
+      </div> 
+      <div class="sub">{{subtitle}}</div>
     </div>
 </template>
 

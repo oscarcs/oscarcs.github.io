@@ -3,7 +3,7 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container">
-          <div class="name">
+          <div :class="['name', nameClass]">
             <span class="logo">//</span> Oscar Sims
           </div>
           <div class="pitch">
@@ -19,6 +19,7 @@
             <router-link to="/about">about</router-link>
             <router-link to="/projects">projects</router-link>
             <router-link to="/writing">writing</router-link>
+            <br class="responsive">
             <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
             <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
             <a class="fab fa-linkedin purple" href="https://www.linkedin.com/in/oscarcs"></a>
@@ -50,18 +51,31 @@ export default class Home extends Vue {
   private accentTextIndex = 0;
   private accentClass = this.accentText[this.accentTextIndex].class;
 
+  private nameClass = 'dark';
+
   mounted () {
     setTimeout(() => {
-      this.accentClass = 'white'
-    }, 1500) 
+      this.accentClass = 'transparent'
+    }, 1500);
 
     setInterval(() => {
       this.accentTextIndex = (this.accentTextIndex + 1) % this.accentText.length;
       this.accentClass = this.accentText[this.accentTextIndex].class;
       setTimeout(() => {
-        this.accentClass = 'white'
+        this.accentClass = 'transparent'
       }, 1500) 
     }, 2000);
+
+    setTimeout(() => {
+      this.nameClass = 'light'
+    }, Math.random() * 3000);
+
+    setInterval(() => {
+      this.nameClass = 'light';
+      setTimeout(() => {
+        this.nameClass = 'dark'
+      }, Math.random() * 3000); 
+    }, 3000);
   }
 }
 </script>
@@ -70,14 +84,14 @@ export default class Home extends Vue {
   @import "@/styles/oscar.scss";
 
   .hero {
-    background-color: white;
-    background-image: url('../assets/sky-tower.jpg');
+    background-color: black;
+    background-image: url('../assets/sky-tower-dark.jpg');
     background-position: bottom 0px right 0px;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  .white {
+  .transparent {
     color: transparent;
   }
 
@@ -85,9 +99,24 @@ export default class Home extends Vue {
     font-size: 2rem;
     margin-bottom: 3rem;
     font-weight: 100;
+    transition: color 1s;
 
-    @media (max-width: 30em) {
-      font-size: 1.66rem;
+    &.light {
+      color: #DEDEDE;
+    }
+
+    &.dark {
+      color: #AAAAAA;
+    }
+
+  }
+
+  br.responsive {
+    display: none;
+    @media (max-width: $tablet) {
+      // font-size: 1.66rem;
+      display: initial;
+      margin-bottom: 1rem;
     }
   }
 
@@ -97,9 +126,10 @@ export default class Home extends Vue {
   }
 
   .pitch {
+    color: white;
     font-size: 3rem;
 
-    @media (max-width: 30em) {
+    @media (max-width: $tablet) {
       font-size: 1.5rem;
     }
   }
@@ -117,16 +147,16 @@ export default class Home extends Vue {
   }
 
   a {
-    color: $slate;
+    color: white;
     &:not(:last-child) {
       margin-right: 2rem;
 
-      &::after {
-        @media (max-width: 30em) {
-          content: "\A";
-          white-space: pre;
-        }
-      }
+      // &::after {
+      //   @media (max-width: 30em) {
+      //     content: "\A";
+      //     white-space: pre;
+      //   }
+      // }
     }
   }
 
