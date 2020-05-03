@@ -68,6 +68,13 @@ $logo-size: 2.4rem;
   .navbar.is-dark {
     background-color: transparent;
   }
+
+  .navbar-menu {
+    @media (max-width: $tablet) {
+      background-color: rgba(0, 0, 0, 0.55) !important;
+      box-shadow: none;
+    }
+  }
 }
 
 html {
@@ -90,25 +97,15 @@ html {
 }
 
 .post {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   cursor: pointer;
 
   h3 {
     font-size: 2rem;
-    display: flex;
-    align-items: center;
     margin-bottom: -0.2rem;
-    width: 100%;
-    white-space: nowrap;
 
-    &::after {
-      content: "";
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: $scheme-main-ter;
-      position: relative;
-      margin-left: 2rem;
+    @media (max-width: $desktop) {
+      font-size: 1.75rem;
     }
   }
 

@@ -5,6 +5,7 @@
         {{date | date}} 
       </div> 
       <div class="sub">{{subtitle}}</div>
+      <hr />
     </div>
 </template>
 
@@ -32,9 +33,4 @@ export default class ImagePost extends Vue {
 </script>
 
 <style scoped lang="scss">
-.post {
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
 </style>
