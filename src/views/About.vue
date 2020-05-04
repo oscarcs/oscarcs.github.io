@@ -24,9 +24,9 @@
                 and an <a href="https://www.ako.ai/">AI startup</a>.
               </p>
               <p>
-                I'm from Auckland, a great little city in New Zealand. Our landmark building looks like a 
-                <a href="https://en.wikipedia.org/wiki/Sky_Tower_(Auckland)"> hypodermic needle</a>. 
-                I studied engineering at the University of Auckland.
+                I'm from Auckland, a great little city in New Zealand (the background tower is the Sky Tower, 
+                our landmark building that looks like a <a href="https://en.wikipedia.org/wiki/Sky_Tower_(Auckland)"> 
+                hypodermic needle</a>). I studied engineering at the University of Auckland.
               </p>
               <p>
                 This website catalogues some of the things I've been working on and thinking about, software and otherwise.
