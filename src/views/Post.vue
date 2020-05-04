@@ -7,8 +7,8 @@
           <h1 class="title">{{title}}</h1>
           <h1 class="subtitle">{{subtitle}}</h1>
           <template v-if="loading">
-            <b-skeleton height="2rem" width="20%" animated="true"></b-skeleton>
-            <b-skeleton height="1rem" width="40%" animated="true"></b-skeleton>
+            <b-skeleton height="2rem" width="20%" :animated="true"></b-skeleton>
+            <b-skeleton height="1rem" width="40%" :animated="true"></b-skeleton>
           </template>
         </div>
       </div>
@@ -19,9 +19,9 @@
           <div class="content" v-html="content"></div>
         </template>
         <template v-else>
-          <b-skeleton width="20%" animated="true"></b-skeleton>
-          <b-skeleton width="20%" animated="true"></b-skeleton>
-          <b-skeleton width="40%" animated="true"></b-skeleton>
+          <b-skeleton width="20%" :animated="true"></b-skeleton>
+          <b-skeleton width="20%" :animated="true"></b-skeleton>
+          <b-skeleton width="40%" :animated="true"></b-skeleton>
         </template>
       </div>
     </div>

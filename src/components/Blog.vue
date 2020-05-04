@@ -25,9 +25,9 @@
     </template>
     <template v-else>
       <div class="post" v-for="i of 2" :key="i">
-        <b-skeleton width="20%" animated="true"></b-skeleton>
-        <b-skeleton width="20%" animated="true"></b-skeleton>
-        <b-skeleton width="40%" animated="true"></b-skeleton>
+        <b-skeleton width="20%" :animated="true"></b-skeleton>
+        <b-skeleton width="20%" :animated="true"></b-skeleton>
+        <b-skeleton width="40%" :animated="true"></b-skeleton>
         <hr />
       </div>
     </template>
@@ -67,7 +67,7 @@ export default class Blog extends Vue {
       this.loading = false;
       this.posts = data.rows.map((x: Post) => {
         x.url = this.url + '/' + x.url;
-        x.date = new Date(x.date);
+        // x.date = new Date(x.date);
         return x;
       });
       this.totalPosts = data.length;
