@@ -18,24 +18,23 @@
             <div class="content">
               <p>Hi, I'm Oscar.</p>
               <p>
-                I'm fortunate enough to be able to write computer programs for money! I've been doing it since 2015,
-                at a range of companies, including a <a href="http://foreground.co.nz/">real estate accounting software company</a>,
-                a <a href="https://www.fphcare.com">publicly-listed medical device manufacturer</a>, 
-                and an <a href="https://www.ako.ai/">AI startup</a>.
+                I'm a professional software engineer from Auckland, New Zealand. I've worked at a range of companies since 2015, 
+                including a real estate software company, a medical device manufacturer, an AI startup, and an anti-money laundering
+                startup. Currently I'm working as a backend engineer, but I have experience in all parts of the stack. I've also tried
+                my hand at hobby compiler design, videogame development, and data visualization to combine technology with my other passions.
               </p>
               <p>
-                I'm from Auckland, a great little city in New Zealand (the background tower is the Sky Tower, 
-                our landmark building that looks like a <a href="https://en.wikipedia.org/wiki/Sky_Tower_(Auckland)"> 
-                hypodermic needle</a>). I studied engineering at the University of Auckland.
+                Outside of the tech industry, I am involved in local and national politics. I'm particularly passionate about urban
+                issues. I have a lot of pride in my hometown – hence the background image – but I believe Auckland can be an even better
+                place to live if we invest in urban renewal, increase housing density, provide better amenities and transport, and thereby
+                provide affordable homes for all.
               </p>
               <p>
-                This website catalogues some of the things I've been working on and thinking about, software and otherwise.
-                Computers are <a href="https://twitter.com/whitequark/status/1115432559738019840?s=20">great</a>,
-                but programmers have a pretty poor track record. Most software is slow, faulty, and late.
-                I'm sure that we can do better.
+                This website is mostly a portfolio of software projects that I have worked on in the past, but I may post commentary here on
+                various issues that I am interested in from time to time.
               </p>
               <p>
-                If you want to get in touch, you can find me below, or at <span class="orange">oscar@oscarsims.co.nz.</span>
+                If you would like to get in touch, you can find me below, or at <span class="orange">oscar@oscarsims.co.nz.</span>
               </p>
               <p>
                 <a class="fab fa-twitter" href="https://twitter.com/oscaroverflow"></a>
