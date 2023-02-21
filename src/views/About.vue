@@ -23,7 +23,7 @@
                 laundering startup.
               </p>
               <p>
-                Outside of the tech industry, I'm involved <a href="https://ccrg.org.nz">my local community</a> and in <a href="https://morehomes.nz">housing advocacy</a>. I have a lot of pride in my hometown – hence the background image – but I believe Auckland can be an even better
+                Outside of the tech industry, I'm involved in <a href="https://ccrg.org.nz">my local community</a> and in <a href="https://morehomes.nz">housing advocacy</a>. I have a lot of pride in my hometown – hence the background image – but I believe Auckland can be an even better
                 place to live if we invest in urban renewal, increase housing density, provide better amenities and transport, and thereby
                 provide affordable homes for all.
               </p>
