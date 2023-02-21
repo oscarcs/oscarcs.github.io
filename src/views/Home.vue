@@ -6,10 +6,11 @@
           <div class="name light">
             <span class="logo">//</span> Oscar Sims
           </div>
+          <!-- <div class="pitch"></div> -->
           <div class="endnote">
             <router-link to="/about">about</router-link>
             <router-link to="/projects">projects</router-link>
-            <router-link to="/writing">posts</router-link>
+            <router-link to="/writing">writing</router-link>
             <br class="responsive">
             <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
             <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
@@ -40,7 +41,7 @@
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
     font-weight: 100;
     transition: color 1s;

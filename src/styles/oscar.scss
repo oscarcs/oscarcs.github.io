@@ -40,6 +40,11 @@ $navbar-height: 5rem;
 
 $logo-size: 2.4rem;
 
+//todo: fix this!
+*:not(.fa, .fab) {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
 .red {
   color: $red;
 }
