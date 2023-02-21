@@ -1,8 +1,8 @@
 <template>
   <div>
     <template v-if="!loading">
-      <template v-for="post of posts">
-        <div class="post" :key="post.id">
+      <template v-for="post of posts" :key="post.id">
+        <div class="post">
           <template v-if="textOnly">
             <TextPost
               :url="post.url"
@@ -17,7 +17,7 @@
               :title="post.title"
               :subtitle="post.subtitle"
               :date="post.date"
-              :img="post.img"
+              :img="post.img ?? ''"
             ></ImagePost>
           </template>
         </div>
@@ -34,8 +34,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+<script setup lang="ts">
+import { ref, reactive, onMounted } from 'vue';
 import TextPost from '@/components/TextPost.vue';
 import ImagePost from '@/components/ImagePost.vue';
 import Config from '../config';
@@ -43,37 +43,35 @@ import Config from '../config';
 interface Post {
   title: string;
   subtitle: string;
-  date: Date;
+  date: string;
   url: string;
   img?: string;
 }
 
-@Component({ components: { TextPost, ImagePost } })
-export default class Blog extends Vue {
-  @Prop() private textOnly!: boolean;
-  @Prop() private sourceUrl!: string;
-  @Prop() private url!: string;
+const props = defineProps({
+  textOnly: { type: Boolean },
+  sourceUrl: { type: String },
+  url: { type: String }
+});
 
-  private loading = true;
-  private posts: Post[] = [];
-  private totalPosts = 0;
+const loading = ref(true);
+let posts = reactive(new Array<Post>());
+const totalPosts = ref(0);
 
-  mounted() {
-    fetch(Config.baseUrl + this.url)
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      this.loading = false;
-      this.posts = data.rows.map((x: Post) => {
-        x.url = this.url + '/' + x.url;
-        // x.date = new Date(x.date);
-        return x;
-      });
-      this.totalPosts = data.length;
-    })
-  }
-}
+onMounted(() => {
+  fetch(Config.baseUrl + props.url)
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    loading.value = false;
+    posts = data.rows.map((x: Post) => {
+      x.url = props.url + '/' + x.url;
+      return x;
+    });
+    totalPosts.value = data.length;
+  })
+});
 </script>
 
 <style scoped lang="scss">

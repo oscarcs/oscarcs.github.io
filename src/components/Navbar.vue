@@ -17,24 +17,16 @@
         <span>Projects</span>
       </b-navbar-item>
       <b-navbar-item tag="router-link" to="/writing">
-        <span>Writing</span>
+        <span>Posts</span>
       </b-navbar-item>
     </template>
   </b-navbar>
 </template>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-
-@Component({})
-export default class Navbar extends Vue {
-  @Prop() private color!: string;
-}
+<script setup lang="ts">
 </script>
 
 <style lang="scss" scoped>
-  @import "@/styles/oscar.scss";
-
   .navbar {
     // background-color: $slate;
   }
@@ -45,15 +37,15 @@ export default class Navbar extends Vue {
   }
 
   .logo-text {
-    margin-left: $logo-size / 2;
-    margin-right: $logo-size / 2;
+    margin-left: calc($logo-size / 2);
+    margin-right: calc($logo-size / 2);
   }
 
   .logo-name {
-    font-size: $logo-size / 2;
+    font-size: calc($logo-size / 2);
   }
 
   .logo-title {
-    font-size: ($logo-size / 2) * 0.75;
+    font-size: calc(($logo-size / 2) * 0.75);
   }
 </style>

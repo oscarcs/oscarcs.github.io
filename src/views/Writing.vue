@@ -4,7 +4,7 @@
       <Navbar></Navbar>
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">Writing</h1>
+          <h1 class="title">Posts</h1>
         </div>
       </div>
     </section>
@@ -19,14 +19,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+<script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import Blog from '@/components/Blog.vue';
-
-@Component({ components: { Navbar, Footer, Blog }})
-export default class Writing extends Vue {
-  
-}
 </script>

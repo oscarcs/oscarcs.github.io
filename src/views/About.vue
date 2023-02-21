@@ -51,20 +51,12 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+<script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
-
-@Component({ components: { Navbar, Footer } })
-export default class About extends Vue {
-
-}
 </script>
 
 <style scoped lang="scss">
-@import "@/styles/oscar.scss";
-
 .content p:not(:last-child) {
   margin-bottom: 2rem;
 }

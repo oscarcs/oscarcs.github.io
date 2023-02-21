@@ -3,22 +3,13 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container">
-          <div :class="['name', nameClass]">
+          <div class="name light">
             <span class="logo">//</span> Oscar Sims
-          </div>
-          <div class="pitch">
-            <!-- <span class="accent">Hi,</span> -->
-             <div class="line">Hi, I'm an engineer from</div> <div class="line">Auckland, NZ.</div>
-          </div>
-          <div class="pitch">
-            I build <span 
-              :class="['accent', accentClass]"
-            >{{accentText[accentTextIndex].text}}.</span>
           </div>
           <div class="endnote">
             <router-link to="/about">about</router-link>
             <router-link to="/projects">projects</router-link>
-            <router-link to="/writing">writing</router-link>
+            <router-link to="/writing">posts</router-link>
             <br class="responsive">
             <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
             <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
@@ -31,57 +22,10 @@
   </div>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-import Navbar from '@/components/Navbar.vue';
-
-@Component({ components: { Navbar } })
-export default class Home extends Vue {
-  private accentText = [
-    { text: 'software', class: 'orange' },
-    { text: 'web apps', class: 'red' },
-    { text: 'compilers', class: 'purple' },
-    { text: 'desktop apps', class: 'blue' },
-    { text: 'backends', class: 'orange' },
-    { text: 'cloud software', class: 'red' },
-    { text: 'tooling', class: 'purple' },
-    { text: 'CI/CD pipelines', class: 'blue' }
-  ]
-
-  private accentTextIndex = 0;
-  private accentClass = this.accentText[this.accentTextIndex].class;
-
-  private nameClass = 'dark';
-
-  mounted () {
-    setTimeout(() => {
-      this.accentClass = 'transparent'
-    }, 1500);
-
-    setInterval(() => {
-      this.accentTextIndex = (this.accentTextIndex + 1) % this.accentText.length;
-      this.accentClass = this.accentText[this.accentTextIndex].class;
-      setTimeout(() => {
-        this.accentClass = 'transparent'
-      }, 1500) 
-    }, 2000);
-
-    setTimeout(() => {
-      this.nameClass = 'light'
-    }, Math.random() * 3000);
-
-    setInterval(() => {
-      this.nameClass = 'light';
-      setTimeout(() => {
-        this.nameClass = 'dark'
-      }, Math.random() * 3000); 
-    }, 3000);
-  }
-}
+<script setup lang="ts">
 </script>
 
 <style scoped lang="scss">
-  @import "@/styles/oscar.scss";
 
   .hero {
     background-color: black;

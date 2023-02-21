@@ -1,27 +1,14 @@
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+</script>
+
 <template>
   <div id="app">
-    <router-view />
+    <RouterView />
   </div>
 </template>
 
-
-<script lang="ts">
-import { Vue, Prop, Component } from 'vue-property-decorator';
-
-@Component({})
-export default class App extends Vue {
-  @Prop(String) navbarColor!: string;
-}
-</script>
-
 <style lang="scss">
-@import "@/styles/oscar.scss";
-
-// Bulma
-@import "~bulma/bulma.sass";
-@import "~buefy/src/scss/buefy";
-
-// Custom
 
 html {
   overflow: auto;
