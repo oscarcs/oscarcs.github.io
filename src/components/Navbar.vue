@@ -11,7 +11,7 @@
         </router-link>
       </div>
       <div class="navbar-end">
-        <router-link class="navbar-item" to="/about">
+        <!-- <router-link class="navbar-item" to="/about">
           <span>About</span>
         </router-link>
         <router-link class="navbar-item" to="/projects">
@@ -19,7 +19,7 @@
         </router-link>
         <router-link class="navbar-item" to="/writing">
           <span>Writing</span>
-        </router-link>
+        </router-link> -->
       </div>
     </div>
   </nav>

@@ -23,18 +23,20 @@
                 laundering startup.
               </p>
               <p>
-                Outside of the tech industry, I'm involved in <a href="https://ccrg.org.nz">my local community</a> and in <a href="https://morehomes.nz">housing advocacy</a>. I have a lot of pride in my hometown – hence the background image – but I believe Auckland can be an even better
-                place to live if we invest in urban renewal, increase housing density, provide better amenities and transport, and thereby
-                provide affordable homes for all.
+                I'm a keen community advocate - and I'm standing as the Labour Party candidate in Auckland Central in 2023.
+                I am driven by a belief in fairness and opportunity for everyone who calls our city home, and I will be a strong advocate
+                for our community on housing, public transport, and the cost of living in the next Labour government.
               </p>
               <p>
-                If you would like to get in touch, you can find me on social media below, or by emailing <span class="orange">oscar@oscarsims.co.nz.</span>
+                If you would like to get in touch, you can find me on social media below.
               </p>
               <p>
-                <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
+                <i>(Authorised by Rob Salmond, 187 Featherston St, Wellington.)</i>
+              </p>
+              <p>
+                <a class="fab fa-twitter orange" href="https://twitter.com/oscarcsims"></a>
                 <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
-                <a class="fab fa-linkedin purple" href="https://www.linkedin.com/in/oscarcs"></a>
-                <a class="fa fa-gamepad blue" href="https://oscar.itch.io"></a>
+                <a class="fab fa-facebook blue" href="https://facebook.com/oscarcsims"></a>
               </p>
             </div>
           </div>

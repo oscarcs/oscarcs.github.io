@@ -19,24 +19,24 @@ const router = createRouter({
       name: 'About',
       component: About
     },
-    {
-      path: '/projects',
-      name: 'Projects',
-      component: Projects
-    },
-    { 
-      path: '/projects/:url', 
-      component: Post
-    },
-    {
-      path: '/writing',
-      name: 'Writing',
-      component: Writing
-    },
-    { 
-      path: '/writing/:url', 
-      component: Post
-    }
+    // {
+    //   path: '/projects',
+    //   name: 'Projects',
+    //   component: Projects
+    // },
+    // { 
+    //   path: '/projects/:url', 
+    //   component: Post
+    // },
+    // {
+    //   path: '/writing',
+    //   name: 'Writing',
+    //   component: Writing
+    // },
+    // { 
+    //   path: '/writing/:url', 
+    //   component: Post
+    // }
   ]
 });
 
