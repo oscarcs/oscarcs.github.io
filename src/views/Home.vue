@@ -4,18 +4,17 @@
       <div class="hero-body">
         <div class="container">
           <div class="name light">
-            <span class="logo">//</span> Oscar Sims
+            Oscar Sims
           </div>
           <!-- <div class="pitch"></div> -->
           <div class="endnote">
-            <router-link to="/about">about</router-link>
-            <router-link to="/projects">projects</router-link>
-            <router-link to="/writing">writing</router-link>
+            <router-link to="/about">About</router-link>
+            <router-link to="/projects">Projects</router-link>
+            <router-link to="/writing">Writing</router-link>
             <br class="responsive">
             <a class="fab fa-twitter orange" href="https://twitter.com/oscaroverflow"></a>
             <a class="fab fa-github red" href="https://github.com/oscarcs"></a>
             <a class="fab fa-linkedin purple" href="https://www.linkedin.com/in/oscarcs"></a>
-            <a class="fa fa-gamepad blue" href="https://oscar.itch.io"></a>
           </div>
         </div>
       </div>
